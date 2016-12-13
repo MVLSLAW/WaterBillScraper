@@ -8,7 +8,7 @@ This class will let you scrape the Baltimore City Water Bill website with a give
 http://cityservices.baltimorecity.gov/water/
 
 ##Liability Waiver
-By using this tool, you release Maryland Volunteer Lawyers Service of any an all liability. Please read the terms of use on the baltimorecity.gov website before using.
+By using this tool, you release Maryland Volunteer Lawyers Service of any and all liability. Please read the terms of use on the baltimorecity.gov website before using.
 http://www.baltimorecity.gov/node/2020
 
 ##Usage
