@@ -15,9 +15,7 @@ http://www.baltimorecity.gov/node/2020
 <pre>
 $temp = new WaterBill('834 Hollins Street');
 if($temp->checkWaterBill()==200){
-	echo "<pre>";
 	print_r($temp->water_bill_array);
-	echo "</pre>";
 	
 }else{
 	echo "Could not locate the address";
