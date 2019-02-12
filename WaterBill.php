@@ -4,23 +4,26 @@
  * WaterBill.php
  *
  * @author     Matthew Stubenberg
- * @copyright  2016 Maryland Volunteer Lawyers Service
+ * @copyright  2019 Maryland Volunteer Lawyers Service
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    1.0
+ * @version    2.0
  */
 /*
 /*
 //This class checks the Baltimore City Gov website and returns the amount due, res code, address of the property (to verify), and if they have a homeowners credit.
 //http://cityservices.baltimorecity.gov/water/
 
-$temp = new WaterBill('834 Hollins Street');
-if($temp->checkWaterBill()==200){
-	echo "<pre>";
+$temp = new WaterBill();
+$returncode = $temp->checkWaterBill('834 Hollins St');
+if($returncode == 200){
 	print_r($temp->water_bill_array);
-	echo "</pre>";
+	//print_r($temp->html); //Uncomment this if you want to simply display the webpage returned.
 	
-}else{
-	echo "Could not locate the address";
+}else if($returncode == 100){
+	echo "Address not found";
+}
+else{
+	echo "Other Error: " . $returncode;
 }
 
 $temp->checkWaterBill(); Return Values:
